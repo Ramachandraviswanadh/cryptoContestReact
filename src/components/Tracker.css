@@ -1,0 +1,14 @@
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.wrapper{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    margin-top: 3px;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+}

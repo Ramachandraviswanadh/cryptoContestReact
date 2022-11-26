@@ -2,6 +2,7 @@ import {useState,useEffect} from 'react'
 import React from 'react'
 import axios from "axios"
 import {Row,Col,Container} from 'react-bootstrap'
+import './Tracker.css'
 
 const Tracker=()=> {
 const  [details,Setdetails] = useState([])
@@ -15,7 +16,7 @@ useEffect(()=>{
 
   return (
     <>
-         <Container>
+         <Container className='wrapper'>
       <Row  style={{fontSize:"1.5em"}}>
         <Col md={2}>Coin</Col>
         <Col md={2}>Symbol</Col>
@@ -37,10 +38,11 @@ useEffect(()=>{
             /> {'  '}{detail.id}</Col>
         
         <Col md={2}>{detail.symbol}</Col>
-        <Col md={2}>{detail.current_price}$</Col>
+        <Col md={2}>${detail.current_price}</Col>
         <Col md={2}>{detail.total_volume}</Col>
-        <Col md={2}>{detail.price_change_percentage_24h}%</Col>
-        <Col md={2}>{detail.market_cap}$</Col>
+        {detail.price_change_percentage_24h<0 ? (<Col className='red' md={2}>{detail.price_change_percentage_24h}%</Col>): (<Col className='green' md={2}>{detail.price_change_percentage_24h}%</Col>)}
+        
+        <Col md={2}>${detail.market_cap}</Col>
         <hr/>
         </Row> ))
         } 
