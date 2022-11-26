@@ -18,10 +18,10 @@ useEffect(()=>{
          <Container>
       <Row  style={{fontSize:"1.5em"}}>
         <Col md={2}>Coin</Col>
-        <Col md={1}>Symbol</Col>
+        <Col md={2}>Symbol</Col>
         <Col md={2}>price</Col>
         <Col md={2}>volume</Col>
-        <Col md={1}>Change</Col>
+        <Col md={2}>Change</Col>
         <Col md={2}>MarketCap</Col>
         <hr/>
       </Row>
